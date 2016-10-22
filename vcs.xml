@@ -22,8 +22,12 @@
           <option name="url" value="https://github.com/sergzin/flamingbutter.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/pax80/flamingbutter.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="C:\Mirco\LG\Project" />
+    <option name="cloneParentDir" value="C:\Users\mpaccusse\.PyCharm2016.1\Project" />
   </component>
 </application>
