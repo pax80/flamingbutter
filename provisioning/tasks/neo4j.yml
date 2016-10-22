@@ -27,4 +27,4 @@
   notify: Reboot
 
 - name: Ensure Neo4j service is enabled and started
-  service: name=neo4j-service enabled=yes state=started
+  service: name=neo4j.service enabled=yes state=started

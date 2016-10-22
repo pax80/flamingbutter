@@ -6,7 +6,7 @@ This project visualise ISIS L2 topology using Neo4j database and help planning M
 ### Installation requirements
 
 Project should work fine on Linux and OSx with the following requirements.
-- Neo4j server version 2.3.7 installed locally
+- Neo4j server version 3.0.6 installed locally
     - disable authentication `dbms.security.auth_enabled=false` in configuration file `neo4j-server.properties`
 - python 2.7
 - python modules
