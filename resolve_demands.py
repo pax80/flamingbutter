@@ -54,7 +54,10 @@ class NodeFinder(object):
 
 
 def main():
-    input_data = cvs_reader(sys.argv[1])
+    t = sys.argv[1]
+    print("{}".format(t))
+    input_data = cvs_reader(t)
+
     output_data = []
     routers = NodeFinder('Router')
     prefixes = NodeFinder('Prefix')

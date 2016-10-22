@@ -78,4 +78,11 @@ match (a:Router{name:'at-vie05b-ri2-re0.00'}), (z:Router{name:'HU-MON-MONR-RA2.0
 p = allshortestPaths((a)-[r:LINK*]->(z))  
 WITH reduce(cost = 0, rel in rels(p) | cost + rel.metric) as sumcost, p
 return sumcost,extract(n IN nodes(p)| n.name)
+
+
+match (a:Router{name:'ie-dub01a-ri1-re0.00'}), (z:Router{name:'nl-ams09b-ri1-re0.00'}), 
+                p = allshortestPaths((a)-[r:LINK*]->(z))  
+                WITH reduce(cost = 0, rel in rels(p) | cost + rel.metric) as sumcost, p
+                return sumcost,extract(n IN nodes(p)| n.name)
+                
 ```
