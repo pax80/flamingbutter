@@ -80,9 +80,19 @@ WITH reduce(cost = 0, rel in rels(p) | cost + rel.metric) as sumcost, p
 return sumcost,extract(n IN nodes(p)| n.name)
 
 
+MATCH (from: Location {LocationName:"x"}), (to: Location {LocationName:"y"}) , 
+path = shortestPath((from)-[:CONNECTED_TO*]->(to))
+RETURN pat
+
 match (a:Router{name:'ie-dub01a-ri1-re0.00'}), (z:Router{name:'nl-ams09b-ri1-re0.00'}), 
                 p = allshortestPaths((a)-[r:LINK*]->(z))  
                 WITH reduce(cost = 0, rel in rels(p) | cost + rel.metric) as sumcost, p
                 return sumcost,extract(n IN nodes(p)| n.name)
+                
+match (a:Router{name:'us-was02a-ri2.00'}), (z:Router{name:'nl-ams09b-ri1-re0.00'}), 
+                p = allshortestPaths((a)-[r:LINK*]->(z))  
+                WITH reduce(cost = 0, rel in rels(p) | cost + rel.metric) as sumcost, p
+                return sumcost,extract(n IN nodes(p)| n.name)
+                
                 
 ```
